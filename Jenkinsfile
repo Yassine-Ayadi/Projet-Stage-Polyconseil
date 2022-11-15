@@ -1,0 +1,60 @@
+#!/usr/bin/env groovy
+
+pipeline {
+    agent any
+  
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('jenkins_aws_access_key_id')
+        AWS_SECRET_ACCESS_KEY = credentials('jenkins_aws_secret_access_key')
+    }
+  
+    stages {
+      
+        stage('provision server') {
+
+            steps {
+                script {
+                    dir('Terraform') {
+                        sh "terraform init"
+                    }
+                }
+            }
+        }
+      
+        stage('deploy Wordpress Helm Chart') {
+            steps {
+                script {
+                   echo 'building docker image...'
+                   buildImage(env.IMAGE_NAME)
+                   dockerLogin()
+                   dockerPush(env.IMAGE_NAME)
+                }
+            }
+        }
+
+        stage('deploy') {
+            environment {
+                DOCKER_CREDS = credentials('docker-hub-repo')
+            }
+            steps {
+                script {
+                   echo "waiting for EC2 server to initialize" 
+                   sleep(time: 90, unit: "SECONDS") 
+
+                   echo 'deploying docker image to EC2...'
+                   echo "${EC2_PUBLIC_IP}"
+
+                   def shellCmd = "bash ./server-cmds.sh ${IMAGE_NAME} ${DOCKER_CREDS_USR} ${DOCKER_CREDS_PSW}"
+                   def ec2Instance = "ec2-user@${EC2_PUBLIC_IP}"
+
+                   sshagent(['server-ssh-key']) {
+                       sh "scp -o StrictHostKeyChecking=no server-cmds.sh ${ec2Instance}:/home/ec2-user"
+                       sh "scp -o StrictHostKeyChecking=no docker-compose.yaml ${ec2Instance}:/home/ec2-user"
+                       sh "ssh -o StrictHostKeyChecking=no ${ec2Instance} ${shellCmd}"
+                   }
+                }
+            }
+        }
+    }
+}
+
