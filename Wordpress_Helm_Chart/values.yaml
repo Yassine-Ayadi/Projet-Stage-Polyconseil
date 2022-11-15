@@ -1,0 +1,28 @@
+mariadbpvc:
+  storage: 300M
+  path: "/mnt/data"
+mariadbpv:
+  storage: 300M
+  accessmode: ReadWriteOnce
+mariadbsvc:
+  port: 3306
+  targetport: 3306
+mariadbdeploy:
+  replicas: 3
+  image: mariadb
+mariadbsecret:
+  password: c2VjcmV0 
+wordpresspvc:
+  storage: 10Gi
+  path: "/mnt/data"
+wordpresspv:
+  storage: 10Gi
+  accessmode: ReadWriteOnce
+wordpresssvc:
+  port: 80
+  targetport: 80
+  type: LoadBalancer
+wordpressdeploy:
+  replicas: 3
+  image: wordpress:latest
+  

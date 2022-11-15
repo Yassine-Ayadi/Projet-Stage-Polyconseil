@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mariadb-internal-service
+spec:
+  selector:
+    app: mariadb
+  ports:
+    - protocol: TCP
+      port: {{ .Values.mariadbsvc.port }}
+      targetPort: {{ .Values.mariadbsvc.targetport }}
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mariadb-deployment
+spec: # specification for deployment resource
+  replicas: {{ .Values.mariadbdeploy.replicas }}
+  selector:
+    matchLabels:
+      app: mariadb
+  template: # blueprint for pods
+    metadata:
+      labels:
+        app: mariadb # service will look for this label
+    spec: # specification for pods
+      containers:
+      - name: mariadb
+        image: {{ .Values.mariadbdeploy.image}}
+        ports:
+        - containerPort: 3306 #default one
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mariadb-secret
+              key: mariadb-root-password
+        - name: MARIADB_DATABASE
+          value: wordpress
+        volumeMounts:
+        - name: mariadb-pv
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mariadb-pv
+        persistentVolumeClaim:
+          claimName: mariadb-pv-claim
