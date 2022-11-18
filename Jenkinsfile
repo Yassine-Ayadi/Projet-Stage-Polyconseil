@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     dir('Terraform') {
-                        sh "terraform -y init -migrate-state -reconfigure " 
+                        sh "terraform init -migrate-state -auto-approve " 
                         sh "terraform apply --auto-approve" 
                         sh "aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-3"
                     }
