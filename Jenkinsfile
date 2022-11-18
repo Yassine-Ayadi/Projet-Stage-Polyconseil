@@ -15,23 +15,22 @@ pipeline {
             steps {
                 script {
                     dir('Terraform') {
-                        // sh "terraform init"
-                       // sh "terraform apply --auto-approve" 
+                        sh "terraform init"
+                        sh "terraform apply --auto-approve" 
                         sh "aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-3"
-                        sh "terraform destroy --auto-approve"
                     }
                 }
             }
         }
       
- /*       stage('deploy Wordpress Helm Chart') {
+        stage('deploy Wordpress Helm Chart') {
             steps {
                 script {
                        sh "helm install wordpress ./Wordpress_Helm_Chart "
 
                 }
             }
-        } */
+        } 
 
 
     }
