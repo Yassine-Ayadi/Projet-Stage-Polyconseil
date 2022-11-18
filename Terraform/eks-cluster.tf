@@ -9,7 +9,7 @@ module "eks" {
   vpc_id = module.myapp-vpc.vpc_id
 
   tags = {
-    environment = "development"
+    environment = "production"
     application = "myapp"
   }
 
