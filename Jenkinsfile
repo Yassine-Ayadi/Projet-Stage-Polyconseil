@@ -10,7 +10,7 @@ pipeline {
   
     stages {
       
-        stage('provision server') {
+        stage('provision infrastructure') {
 
             steps {
                 script {
