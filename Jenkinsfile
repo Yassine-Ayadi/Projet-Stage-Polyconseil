@@ -17,7 +17,7 @@ pipeline {
                     dir('Terraform') {
                        // sh "echo yes | terraform init --migrate-state " 
                        // sh "terraform apply --auto-approve" 
-                        sh "terraform destroy"
+                        sh "terraform destroy --auto-approve"
                        // sh "aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-3"
                     }
                 }
