@@ -39,7 +39,7 @@ spec: # specification for deployment resource
           value: wordpress
         volumeMounts:
         - name: mariadb-pv
-          mountPath: /var/lib/mysql
+          mountPath: /var/lib/mariadb
       volumes:
       - name: mariadb-pv
         persistentVolumeClaim:
