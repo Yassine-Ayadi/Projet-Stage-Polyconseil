@@ -1,28 +1,6 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+<a name="readme-top"></a>
+
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -30,23 +8,17 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <a>
+    <img src="assets/Twitter-Social-Graphic-150.png" width="500" height="300">
+  </a>
+  
+  <h3 align="center">Déploiement d'un Wordpress sur un K8s cluster</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://drive.google.com/file/d/1NWYQm3WMgxJy6v_MiRlwAEI4E5ssOdP9/view?usp=share_link">Voir Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://www.canva.com/design/DAFSUqOr44k/OQdXHrZRbE4srRqs2dX9Jg/edit?utm_content=DAFSUqOr44k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Voir Présentation</a>
   </p>
 </div>
 
@@ -81,73 +53,181 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## A propos du projet
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Ce projet vise à l'automatisation de bout en bout du processus de déploiement d'un Wordpress sur un cluster K8s (Un cluster EKS pour notre cas de figure) tout en abordant les point suivants: 
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+* Déployer un WordPress sur un cluster Kubernetes. (EKS cluster)
+* Packager l'application WordPress avec l'outil Helm.
+* Automatiser le provisioning de toute l'infrastructure. (utilisation de Terraform)
+* Automatiser le déploiement avec une chaîne de CI/CD. (utilisation de Jenkins)
+* Déployer une architecture 'production-ready'.
+* Assurer le monitoring du K8s Cluster avec Prometheus et Grafana.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
+### Technologies utilisées
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Les différentes technologies utilisées pour la mise en oeuvre de ce projet sont les suivantes: 
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* Kubernetes
+* Terraform
+* Jenkins
+* AWS Cloud provider
+* Helm
+* Prometheus
+* Grafana
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
-## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+## Prérequis
 
-### Prerequisites
+* Une inscription AWS
+* AWS CLI
+* Kubectl
+* Terraform
+* Helm
+* Image docker de Jenkins
+* Docker 
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
-### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+## Etapes à suivre
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+Ce projet a été élaboré en suivant plusieurs phases permettant d'assurer une automatisation de l'intégralité du processus de déploiement du Wordpress sur le cluster EKS. Pour bénéficier de cette automatisation, Veuillez suivre les étapes suivantes:
+
+1. Approvisonnement d'une instance EC2 sur le cloud AWS 
+
+<div align="center">
+  <a>
+    <img src="assets/EC2_Jenkins.png">
+  </a>
+</div> 
+  
+2. Lancer l'image de Jenkins sur l'instance EC2
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   docker run --name myjenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home jenkins
    ```
-3. Install NPM packages
+   
+<div align="center">
+  <a>
+    <img src="assets/JenkinsImage.png">
+  </a>
+</div> 
+
+3. Créer un pipeline sur Jenkins et définir ce répo comme Branch source pour ce pipeline
+
+<div align="center">
+  <a>
+    <img src="assets/Source.png">
+  </a>
+</div> 
+
+4. Définir les identifiants "Credentials" du compte AWS sur Jenkins
+
+<div align="center">
+  <a>
+    <img src="assets/JenkinsCredentials.png">
+  </a>
+</div> 
+
+5. Créer un S3 bucket sur AWS pour le stockage des fichiers d'état de Terraform "Remote State"
+
+<div align="center">
+  <a>
+    <img src="assets/S3.png">
+  </a>
+</div> 
+
+6. Lancer le build du Pipeline
+
+<div align="center">
+  <a>
+    <img src="assets/Pipeline.png">
+  </a>
+</div> 
+
+7. Vérifier la création du cluster EKS
+
+<div align="center">
+  <a>
+    <img src="assets/EKS.png">
+  </a>
+</div> 
+
+8. Vérifier la création du VPC
+
+<div align="center">
+  <a>
+    <img src="assets/VPC.png">
+  </a>
+</div> 
+
+8. Vérifier la création du LoadBalancer
+
+<div align="center">
+  <a>
+    <img src="assets/LoadBalancer.png">
+  </a>
+</div> 
+
+9. Accès à Wordpress à travers le nom DNS du LoadBalancer
+
+<div align="center">
+  <a>
+    <img src="assets/Wordpress.png">
+  </a>
+</div> 
+
+
+10. Déploiement de Prometheus et Grafana pour le monitoring du K8s cluster 
+
+
    ```sh
-   npm install
+  aws eks update-kubeconfig --name myapp-eks-cluster --region eu-west-3
+  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  helm repo update
+  kubectl create namespace monitoring
+  helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring
+  helm ls
+
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+   
+11. Accès à Prometheus UI
+
+   ```sh
+kubectl port-forward svc/monitoring-kube-prometheus-prometheus 9090:9090 -n monitoring &
    ```
+
+<div align="center">
+  <a>
+    <img src="assets/Prometheus.png">
+  </a>
+</div> 
+
+11. Accès à Grafana
+
+ ```sh  
+kubectl port-forward svc/monitoring-grafana 8080:80 -n monitoring &
+user: admin
+pwd: prom-operator
+```
+
+
+<div align="center">
+  <a>
+    <img src="assets/Grafana.png">
+  </a>
+</div> 
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,7 +330,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/yassine-ayadi/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
