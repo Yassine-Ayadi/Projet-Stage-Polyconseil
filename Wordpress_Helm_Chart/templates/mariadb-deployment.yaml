@@ -11,7 +11,7 @@ spec:
       targetPort: {{ .Values.mariadbsvc.targetport }}
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: mariadb-deployment
 spec: # specification for deployment resource
