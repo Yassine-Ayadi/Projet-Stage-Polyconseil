@@ -10,7 +10,7 @@
 <div align="center">
 
   <a>
-    <img src="assets/Twitter-Social-Graphic-150.png" width="500" height="300">
+    <img src="assets/Présentation.png" >
   </a>
   
   <h3 align="center">Déploiement d'un Wordpress sur un K8s cluster</h3>
@@ -29,31 +29,28 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Déploiement d'un Wordpress sur un cluster K8s</a>
+      <a href="#à_propos">A propos du projet</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#tech">Technologies utilisées</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#Prérequis">Prérequis</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Etapes à suivre</a></li>
+    <li><a href="#Demo">Vidéo demo</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#liens">Liens utiles</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
+<a name="à_propos"></a>
 ## A propos du projet
+
 
 Ce projet vise à l'automatisation de bout en bout du processus de déploiement d'un Wordpress sur un cluster K8s (Un cluster EKS pour notre cas de figure) tout en abordant les point suivants: 
 
@@ -68,7 +65,7 @@ Ce projet vise à l'automatisation de bout en bout du processus de déploiement 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
+<a name="tech"></a>
 ### Technologies utilisées
 
 Les différentes technologies utilisées pour la mise en oeuvre de ce projet sont les suivantes: 
@@ -85,10 +82,11 @@ Les différentes technologies utilisées pour la mise en oeuvre de ce projet son
 
 
 
-<!-- GETTING STARTED -->
-
+<!-- Prérequis -->
+<a name="Prérequis"></a>
 ## Prérequis
 
+<a name="Prérequis"></a>
 * Une inscription AWS
 * AWS CLI
 * Kubectl
@@ -97,9 +95,12 @@ Les différentes technologies utilisées pour la mise en oeuvre de ce projet son
 * Image docker de Jenkins
 * Docker 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<a name="usage"></a>
 ## Etapes à suivre
+
 
 Ce projet a été élaboré en suivant plusieurs phases permettant d'assurer une automatisation de l'intégralité du processus de déploiement du Wordpress sur le cluster EKS. Pour bénéficier de cette automatisation, Veuillez suivre les étapes suivantes:
 
@@ -232,120 +233,56 @@ pwd: prom-operator
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Vidéo démo -->
+<a name="Demo"></a>
+## Vidéo Démo
+Ceci est une partie de la vidéo démo. Pour visualiser l'intégralité de la vidéo cliquez ici: [Intégralité de la vidéo](https://drive.google.com/file/d/1NWYQm3WMgxJy6v_MiRlwAEI4E5ssOdP9/view?usp=share_link)
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+https://user-images.githubusercontent.com/82244304/202921586-fabb58c2-4f2f-4eae-ba63-9fa1ee89706c.mp4
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Déployer un Wordpress sur un cluster EKS
+- [x] Packager l'application avec l'outil Helm
+- [x] Automatiser le Provisionning de toute l'infrastructure avec Terraform
+- [x] Automatiser le déploiement en implémentant un Pipeline CI/CD
+- [x] Assurer le Monitoring à l'aide de Prometheus et Grafana
+- [ ] 
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Yassine AYADI - [@Linkedin](https://www.linkedin.com/in/yassine-ayadi/) - yassine.ayadi@insat.ucar.tn
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Project Link: [https://github.com/Yassine-Ayadi/Projet-Stage-Polyconseil.git](https://github.com/Yassine-Ayadi/Projet-Stage-Polyconseil.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+<!-- Liens utiles -->
+<a name="liens"></a>
+## Liens utiles
+
+
+Ces liens pourraient être utiles: 
+
+* [Installer Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+* [Installer AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+* [Installer Kubectl](https://kubernetes.io/docs/tasks/tools/)
+* [Jenkins docker Image](https://hub.docker.com/r/jenkins/jenkins)
+* [Installer Helm](https://helm.sh/docs/intro/install/)
+* [Installer Docker](https://www.hostinger.fr/tutoriels/installer-docker-sur-ubuntu)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+[linkedin-url]: https://www.linkedin.com/in/yassine-ayadi-68aa551a0/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/yassine-ayadi/
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
-# Projet-Stage-Polyconseil
