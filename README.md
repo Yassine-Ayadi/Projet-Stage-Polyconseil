@@ -53,7 +53,7 @@
 ## A propos du projet
 
 
-Ce projet vise à l'automatisation de bout en bout du processus de déploiement d'un Wordpress sur un cluster K8s (Un cluster EKS pour notre cas de figure) tout en abordant les point suivants: 
+Ce projet vise à l'automatisation de bout en bout du processus de déploiement d'un Wordpress sur un cluster K8s (Un cluster EKS dans notre cas de figure) tout en abordant les point suivants: 
 
 * Déployer un WordPress sur un cluster Kubernetes. (EKS cluster)
 * Packager l'application WordPress avec l'outil Helm.
