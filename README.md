@@ -250,7 +250,6 @@ https://user-images.githubusercontent.com/82244304/202921586-fabb58c2-4f2f-4eae-
 - [x] Automatiser le Provisionning de toute l'infrastructure avec Terraform
 - [x] Automatiser le déploiement en implémentant un Pipeline CI/CD
 - [x] Assurer le Monitoring à l'aide de Prometheus et Grafana
-- [ ] 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
