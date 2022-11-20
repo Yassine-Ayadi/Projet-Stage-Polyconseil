@@ -39,6 +39,7 @@
     </li>
     <li><a href="#usage">Etapes à suivre</a></li>
     <li><a href="#Demo">Vidéo demo</a></li>
+    <li><a href="#Presentation">Présentation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#liens">Liens utiles</a></li>
@@ -241,6 +242,20 @@ Ceci est une partie de la vidéo démo. Pour visualiser l'intégralité de la vi
 https://user-images.githubusercontent.com/82244304/202921586-fabb58c2-4f2f-4eae-ba63-9fa1ee89706c.mp4
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Présentation -->
+<a name="Presentation"></a>
+## Présentation
+Scannez le code QR pour accéder à une présentation des points importants de ce projet: 
+
+<div align="center">
+  <a>
+    <img src="assets/QR_Code.png">
+  </a>
+</div> 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- ROADMAP -->
 ## Roadmap
