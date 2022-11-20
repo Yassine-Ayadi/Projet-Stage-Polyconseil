@@ -10,7 +10,7 @@ pipeline {
   
     stages {
       
-   /*     stage('provision infrastructure') {
+        stage('provision infrastructure') {
 
             steps {
                 script {
@@ -21,13 +21,12 @@ pipeline {
                     }
                 }
             }
-        } */ 
+        } 
       
         stage('deploy Wordpress Helm Chart') {
             steps {
                 script {
-                   //    sh "helm install wordpress ./Wordpress_Helm_Chart "
-                       sh "helm uninstall wordpress "
+                       sh "helm install wordpress ./Wordpress_Helm_Chart "
 
                 }
             }
