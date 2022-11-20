@@ -90,7 +90,7 @@ Les différentes technologies utilisées pour la mise en oeuvre de ce projet son
 * Une inscription AWS
 * AWS CLI
 * Kubectl
-* Terraform
+* Terraform CLI
 * Helm
 * Image docker de Jenkins
 * Docker 
