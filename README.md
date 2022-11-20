@@ -26,7 +26,7 @@
 
 <!-- TABLE DES MATIÈRES -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>TABLE DES MATIÈRES</summary>
   <ol>
     <li>
       <a href="#à_propos">A propos du projet</a>
