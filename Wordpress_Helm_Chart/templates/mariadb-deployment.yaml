@@ -9,7 +9,6 @@ spec:
     - protocol: TCP
       port: {{ .Values.mariadbsvc.port }}
       targetPort: {{ .Values.mariadbsvc.targetport }}
-  clusterIP: None
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -40,7 +39,7 @@ spec: # specification for deployment resource
           value: wordpress
         volumeMounts:
         - name: mariadb-pv
-          mountPath: /var/lib/mysql
+          mountPath: /var/lib/mariadb
       volumes:
       - name: mariadb-pv
         persistentVolumeClaim:
