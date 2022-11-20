@@ -24,7 +24,7 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE DES MATIÈRES -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
