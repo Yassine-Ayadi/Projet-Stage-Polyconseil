@@ -11,10 +11,11 @@ spec:
       targetPort: 3306
 ---
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: mariadb-deployment
 spec: # specification for deployment resource
+  serviceName: mariadb-internal-service
   replicas: 3
   selector:
     matchLabels:
