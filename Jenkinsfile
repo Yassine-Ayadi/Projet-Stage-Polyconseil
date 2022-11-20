@@ -26,7 +26,8 @@ pipeline {
         stage('deploy Wordpress Helm Chart') {
             steps {
                 script {
-                       sh "helm install wordpress ./Wordpress_Helm_Chart "
+                      // sh "helm install wordpress ./Wordpress_Helm_Chart "
+                       sh "helm uninstall wordpress"
 
                 }
             }
